@@ -6,7 +6,7 @@ var items = ["task1", "task2", "task 3"];
 app.listen(3000);
 app.set("view engine", "ejs");
 app.use(bodyParser.urlencoded({ extended: true }));
-
+app.use(express.static("public"));
 app.get("/", function (req, res) {
   var today = new Date();
   var day = today.toLocaleDateString("en-UK");
